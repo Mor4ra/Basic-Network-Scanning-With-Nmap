@@ -39,6 +39,7 @@ file transfers, it's a common service and one may run into it while probing a ne
 ## Analysis
 - Below is a breakdown of each port, it's purpose and what an attacker could deduct from it the moment they see it open:
 
+
 **FTP/Port 21** - this is a protocol that enables file transfer between machines on a network, with it, one can download or upload files.
 It's a legacy protocol and has since been replaced by SFTP, the secure version, FTP sends traffic in plain text which can be intercepted by an attacker
 hence the need for SFTP.
@@ -58,6 +59,7 @@ is HTTPS, which is just Secure HTTP meaning web content is served while encrypte
 or you're probing a misconfigured server. If it's a latter, this is juicy starting point to probe for vulnerabilities and exposed files, check for exposed
 HTTP response headers which usually reveal the server name and version like `apache/2.4.1` which tells the attacker the exact kind of exploit to look for.
 The attacker could run a directory brute-force tool like `gobuster` to find hidden directories like `/admin` that are linked anywhere.
+
 
 ## Conclusion
 - `nmap` is a fundamental reconnaissance tool that reveals what services a target is running and whether they're open or not. Having this information
